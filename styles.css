@@ -6,7 +6,7 @@
     border: 2px solid red; 
     border-radius: 50%; 
     pointer-events: none; 
-
+}
 .info-tile {
     display: none;
     position: absolute;
