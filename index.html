@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blenheim CBD Eateries</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="cbdmap_Page_1.png" alt="Blenheim CBD Eateries" usemap="#cbdmap" id="map-image" width="">
+        <!-- Overlay elements will be added here by JavaScript -->
+    </div>
+
+    <map name="cbdmap">
+        <area shape="circle" coords="716,136,25" alt="Savvy at Scenic Hotel" href="javascript:void(0);"
+            onclick="showInfo(event, 'savvy_at_scenic_hotel')">
+        <area shape="circle" coords="700,374,25" alt="Quench at Chateau Marlborough" href="javascript:void(0);"
+            onclick="showInfo(event, 'quench_at_chateau_marlborough')">
+        <area shape="circle" coords="1070,389,25" alt="Watery Mouth" href="javascript:void(0);"
+            onclick="showInfo(event, 'watery_mouth')">
+        <area shape="circle" coords="897,1652,25" alt="Bamboo Gardens" href="javascript:void(0);"
+            onclick="showInfo(event, 'bamboo_gardens')">
+        <area shape="circle" coords="1324,350,25" alt="Herb and Olive" href="javascript:void(0);"
+            onclick="showInfo(event, 'herb_and_olive')">
+        <area shape="circle" coords="1481,243,25" alt="Market Street Cafe" href="javascript:void(0);"
+            onclick="showInfo(event, 'market_street_cafe')">
+        <area shape="circle" coords="1536,190,25" alt="Biddy Kate's" href="javascript:void(0);"
+            onclick="showInfo(event, 'biddy_kates')">
+        <area shape="circle" coords="1863,257,25" alt="Noodle Corner" href="javascript:void(0);"
+            onclick="showInfo(event, 'noodle_corner')">
+        <area shape="circle" coords="1795,375,25" alt="Bento" href="javascript:void(0);"
+            onclick="showInfo(event, 'bento')">
+        <area shape="circle" coords="1710,368,25" alt="Cilantro" href="javascript:void(0);"
+            onclick="showInfo(event, 'cilantro')">
+        <area shape="circle" coords="2083,462,25" alt="Raupo" href="javascript:void(0);"
+            onclick="showInfo(event, 'raupo')">
+        <area shape="circle" coords="1938,444,25" alt="CBD @ the Library" href="javascript:void(0);"
+            onclick="showInfo(event, 'cbd_at_the_library')">
+        <area shape="circle" coords="1860,442,25" alt="Minghettis" href="javascript:void(0);"
+            onclick="showInfo(event, 'minghettis')">
+        <area shape="circle" coords="1674,419,25" alt="Eat Thai" href="javascript:void(0);"
+            onclick="showInfo(event, 'eat_thai')">
+        <area shape="circle" coords="1626,421,25" alt="Cancun Eats" href="javascript:void(0);"
+            onclick="showInfo(event, 'cancun_eats')">
+        <area shape="circle" coords="1579,421,25" alt="CPR" href="javascript:void(0);" onclick="showInfo(event, 'cpr')">
+        <area shape="circle" coords="1356,410,25" alt="Dolce" href="javascript:void(0);"
+            onclick="showInfo(event, 'dolce')">
+        <area shape="circle" coords="1310,456,25" alt="Sakim" href="javascript:void(0);"
+            onclick="showInfo(event, 'sakim')">
+        <area shape="circle" coords="1451,519,25" alt="Thomas and Sons Cafe" href="javascript:void(0);"
+            onclick="showInfo(event, 'thomas_and_sons_cafe')">
+        <area shape="circle" coords="1394,681,25" alt="The Little Cafe" href="javascript:void(0);"
+            onclick="showInfo(event, 'the_little_cafe')">
+        <area shape="circle" coords="1483,819,25" alt="It's All Good Brew" href="javascript:void(0);"
+            onclick="showInfo(event, 'its_all_good_brew')">
+        <area shape="circle" coords="1301,799,25" alt="CBD Eatery" href="javascript:void(0);"
+            onclick="showInfo(event, 'cbd_eatery')">
+        <area shape="circle" coords="1551,838,25" alt="Teaology" href="javascript:void(0);"
+            onclick="showInfo(event, 'teaology')">
+        <area shape="circle" coords="1713,958,25" alt="Hakuna Matata" href="javascript:void(0);"
+            onclick="showInfo(event, 'hakuna_matata')">
+        <area shape="circle" coords="1501,1024,25" alt="Akbabas" href="javascript:void(0);"
+            onclick="showInfo(event, 'akbabas')">
+        <area shape="circle" coords="1469,1051,25" alt="Fusion" href="javascript:void(0);"
+            onclick="showInfo(event, 'fusion')">
+        <area shape="circle" coords="1436,1082,25" alt="Ritual Cafe" href="javascript:void(0);"
+            onclick="showInfo(event, 'ritual_cafe')">
+        <area shape="circle" coords="1222,937,25" alt="Taika" href="javascript:void(0);"
+            onclick="showInfo(event, 'taika')">
+        <area shape="circle" coords="1276,983,25" alt="Brumbys" href="javascript:void(0);"
+            onclick="showInfo(event, 'brumbys')">
+        <area shape="circle" coords="1276,1032,25" alt="Chai-Yo" href="javascript:void(0);"
+            onclick="showInfo(event, 'chai_yo')">
+        <area shape="circle" coords="1272,1075,25" alt="Tea Shack" href="javascript:void(0);"
+            onclick="showInfo(event, 'tea_shack')">
+        <area shape="circle" coords="1271,1122,25" alt="Chantilly" href="javascript:void(0);"
+            onclick="showInfo(event, 'chantilly')">
+        <area shape="circle" coords="1268,1166,25" alt="Noodle Canteen" href="javascript:void(0);"
+            onclick="showInfo(event, 'noodle_canteen')">
+        <area shape="circle" coords="1346,1166,25" alt="Scotch" href="javascript:void(0);"
+            onclick="showInfo(event, 'scotch')">
+        <area shape="circle" coords="1305,1189,25" alt="Yum Yum Kebabs" href="javascript:void(0);"
+            onclick="showInfo(event, 'yum_yum_kebabs')">
+        <area shape="circle" coords="1057,1032,25" alt="Charcoal Indian" href="javascript:void(0);"
+            onclick="showInfo(event, 'charcoal_indian')">
+        <area shape="circle" coords="1221,1218,25" alt="Good Home" href="javascript:void(0);"
+            onclick="showInfo(event, 'good_home')">
+        <area shape="circle" coords="1114,1360,25" alt="Yard Bar" href="javascript:void(0);"
+            onclick="showInfo(event, 'yard_bar')">
+        <area shape="circle" coords="1205,1363,25" alt="Pizza Hut" href="javascript:void(0);"
+            onclick="showInfo(event, 'pizza_hut')">
+        <area shape="circle" coords="1243,1333,25" alt="Village India" href="javascript:void(0);"
+            onclick="showInfo(event, 'village_india')">
+        <area shape="circle" coords="1277,1300,25" alt="Lemongrass" href="javascript:void(0);"
+            onclick="showInfo(event, 'lemongrass')">
+        <area shape="circle" coords="1516,1090,25" alt="Mango" href="javascript:void(0);"
+            onclick="showInfo(event, 'mango')">
+        <area shape="circle" coords="1516,1140,25" alt="Sanctum Tabletop" href="javascript:void(0);"
+            onclick="showInfo(event, 'sanctum_tabletop')">
+        <area shape="circle" coords="1520,1183,25" alt="Urban Fare" href="javascript:void(0);"
+            onclick="showInfo(event, 'urban_fare')">
+        <area shape="circle" coords="1522,1230,25" alt="The Tamarind" href="javascript:void(0);"
+            onclick="showInfo(event, 'the_tamarind')">
+        <area shape="circle" coords="1523,1274,25" alt="Gohan" href="javascript:void(0);"
+            onclick="showInfo(event, 'gohan')">
+        <area shape="circle" coords="1521,1358,25" alt="Master Roasts" href="javascript:void(0);"
+            onclick="showInfo(event, 'master_roasts')">
+        <area shape="circle" coords="1587,1431,25" alt="Thai 9" href="javascript:void(0);"
+            onclick="showInfo(event, 'thai_9')">
+        <area shape="circle" coords="1523,1433,25" alt="Frank's Oyster Bar" href="javascript:void(0);"
+            onclick="showInfo(event, 'franks_oyster_bar')">
+        <area shape="circle" coords="1462,1467,25" alt="Berg's Chow" href="javascript:void(0);"
+            onclick="showInfo(event, 'bergs_chow')">
+        <area shape="circle" coords="1523,1524,25" alt="Fairweathers" href="javascript:void(0);"
+            onclick="showInfo(event, 'fairweathers')">
+        <area shape="circle" coords="1589,1487,25" alt="Sammie" href="javascript:void(0);"
+            onclick="showInfo(event, 'sammie')">
+        <area shape="circle" coords="1601,1566,25" alt="Marlborough Public House" href="javascript:void(0);"
+            onclick="showInfo(event, 'marlborough_public_house')">
+        <area shape="circle" coords="2137,1597,25" alt="CPR Express" href="javascript:void(0);"
+            onclick="showInfo(event, 'cpr_express')">
+        <area shape="circle" coords="2136,1642,25" alt="Subway" href="javascript:void(0);"
+            onclick="showInfo(event, 'subway')">
+        <area shape="circle" coords="2002,857,25" alt="Dominos" href="javascript:void(0);"
+            onclick="showInfo(event, 'dominos')">
+        <area shape="circle" coords="2448,766,25" alt="Karaka Kitchen" href="javascript:void(0);"
+            onclick="showInfo(event, 'karaka_kitchen')">
+    </map>
+
+    <!-- Info tiles for each area -->
+    <div class="info-tile" id="savvy_at_scenic_hotel">
+        <h2>Savvy at Scenic Hotel</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Savvy+at+Scenic+Hotel"
+                target="_blank">Scenic Hotel, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> 7:00 AM - 9:00 PM</p>
+        <p><strong>Website:</strong> <a
+                href="https://www.scenichotelgroup.co.nz/blenheim/scenic-hotel-marlborough/savvy-restaurant/"
+                target="_blank">scenichotelgroup.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 5079</p>
+        <button onclick="hideInfo('savvy_at_scenic_hotel')">Close</button>
+    </div>
+    <div class="info-tile" id="quench_at_chateau_marlborough">
+        <h2>Quench at Chateau Marlborough</h2>
+        <p><strong>Address:</strong> <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Quench+at+Chateau+Marlborough"
+                target="_blank">Chateau Marlborough, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 6:30 AM - 10:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://www.marlboroughnz.com/" target="_blank">marlboroughnz.com</a></p>
+        <p><strong>Phone:</strong> (03) 578 0064</p>
+        <button onclick="hideInfo('quench_at_chateau_marlborough')">Close</button>
+    </div>
+    <div class="info-tile" id="watery_mouth">
+        <h2>Watery Mouth</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Watery+Mouth"
+                target="_blank">71 High St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 4:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://waterymouthcafe.co.nz/" target="_blank">waterymouthcafe.co.nz</a>
+        </p>
+        <p><strong>Phone:</strong> (03) 578 3828</p>
+        <button onclick="hideInfo('watery_mouth')">Close</button>
+    </div>
+    <div class="info-tile" id="bamboo_gardens">
+        <h2>Bamboo Gardens</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Bamboo+Gardens"
+                target="_blank">21 Nelson St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:30 AM - 9:00 PM</p>
+        <p><strong>Website:</strong> <a href="http://bamboogardens.co.nz/" target="_blank">bamboogardens.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 4987</p>
+        <button onclick="hideInfo('bamboo_gardens')">Close</button>
+    </div>
+    <div class="info-tile" id="herb_and_olive">
+        <h2>Herb and Olive</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Herb+and+Olive"
+                target="_blank">2 High St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Fri: 7:00 AM - 3:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://herbandolive.co.nz/" target="_blank">herbandolive.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 579 1212</p>
+        <button onclick="hideInfo('herb_and_olive')">Close</button>
+    </div>
+    <div class="info-tile" id="market_street_cafe">
+        <h2>Market Street Cafe</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Market+Street+Cafe"
+                target="_blank">Market St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 5:00 PM</p>
+        <p><strong>Website:</strong> <a href="http://marketstreetcafe.co.nz/" target="_blank">marketstreetcafe.co.nz</a>
+        </p>
+        <p><strong>Phone:</strong> (03) 578 2550</p>
+        <button onclick="hideInfo('market_street_cafe')">Close</button>
+    </div>
+    <div class="info-tile" id="biddy_kates">
+        <h2>Biddy Kate's</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Biddy+Kate's"
+                target="_blank">6 Maxwell Rd, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 11:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://biddykates.co.nz/" target="_blank">biddykates.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 577 5162</p>
+        <button onclick="hideInfo('biddy_kates')">Close</button>
+    </div>
+    <div class="info-tile" id="noodle_corner">
+        <h2>Noodle Corner</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Noodle+Corner"
+                target="_blank">60 Queen St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 9:00 PM</p>
+        <p><strong>Website:</strong> <a href="http://noodlecorner.co.nz/" target="_blank">noodlecorner.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 8088</p>
+        <button onclick="hideInfo('noodle_corner')">Close</button>
+    </div>
+    <div class="info-tile" id="bento">
+        <h2>Bento</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Bento"
+                target="_blank">32 Scott St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 8:30 PM</p>
+        <p><strong>Website:</strong> <a href="http://bentoblenheim.co.nz/" target="_blank">bentoblenheim.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 4502</p>
+        <button onclick="hideInfo('bento')">Close</button>
+    </div>
+    <div class="info-tile" id="cilantro">
+        <h2>Cilantro</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Cilantro"
+                target="_blank">18 Charles St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 8:00 AM - 3:00 PM</p>
+        <p><strong>Website:</strong> <a href="http://cilantrocafe.co.nz/" target="_blank">cilantrocafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 577 9700</p>
+        <p><strong>Walk Time from Stadium 2000:</strong> 6 mins</p>
+        <button onclick="hideInfo('cilantro')">Close</button>
+    </div>
+    <div class="info-tile" id="raupo">
+        <h2>Raupo</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Raupo"
+                target="_blank">6 Symons St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 8:00 AM - 10:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://raupocafe.co.nz/" target="_blank">raupocafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 577 8822</p>
+        <p><strong>Walk Time from Stadium 2000:</strong> 14 mins</p>
+        <button onclick="hideInfo('raupo')">Close</button>
+    </div>
+    <div class="info-tile" id="cbd_at_the_library">
+        <h2>CBD @ the Library</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=CBD+@+the+Library"
+                target="_blank">Blenheim Library, 33 Arthur St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Fri: 9:00 AM - 6:00 PM, Sat-Sun: 10:00 AM - 4:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://marlboroughlibraries.govt.nz/"
+                target="_blank">marlboroughlibraries.govt.nz</a></p>
+        <p><strong>Phone:</strong> (03) 520 7491</p>
+        <button onclick="hideInfo('cbd_at_the_library')">Close</button>
+    </div>
+    <div class="info-tile" id="minghettis">
+        <h2>Minghettis</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Minghettis"
+                target="_blank">5 Scott St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 3:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://minghettis.co.nz/" target="_blank">minghettis.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 579 2388</p>
+        <button onclick="hideInfo('minghettis')">Close</button>
+    </div>
+    <div class="info-tile" id="eat_thai">
+        <h2>Eat Thai</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Eat+Thai"
+                target="_blank">40 Scott St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 9:00 PM</p>
+        <p><strong>Website:</strong> <a href="http://eatthai.co.nz/" target="_blank">eatthai.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 7758</p>
+        <button onclick="hideInfo('eat_thai')">Close</button>
+    </div>
+    <div class="info-tile" id="cancun_eats">
+        <h2>Cancun Eats</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Cancun+Eats"
+                target="_blank">26 Maxwell Rd, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 8:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://cancuneats.co.nz/" target="_blank">cancuneats.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 5033</p>
+        <button onclick="hideInfo('cancun_eats')">Close</button>
+    </div>
+    <div class="info-tile" id="cpr">
+        <h2>CPR</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=CPR"
+                target="_blank">100 High St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 5:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://cprcafe.co.nz/" target="_blank">cprcafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 5265</p>
+        <button onclick="hideInfo('cpr')">Close</button>
+    </div>
+    <div class="info-tile" id="dolce">
+        <h2>Dolce</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Dolce"
+                target="_blank">9 Scott St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 4:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://dolcecafe.co.nz/" target="_blank">dolcecafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 577 2329</p>
+        <button onclick="hideInfo('dolce')">Close</button>
+    </div>
+    <div class="info-tile" id="sakim">
+        <h2>Sakim</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Sakim"
+                target="_blank">12 Main St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 11:00 AM - 9:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://sakim.co.nz/" target="_blank">sakim.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 5888</p>
+        <button onclick="hideInfo('sakim')">Close</button>
+    </div>
+    <div class="info-tile" id="thomas_and_sons_cafe">
+        <h2>Thomas and Sons Cafe</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Thomas+and+Sons+Cafe"
+                target="_blank">4 Scott St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Fri: 7:00 AM - 5:00 PM, Sat-Sun: 8:00 AM - 4:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://thomasandsonscafe.co.nz/"
+                target="_blank">thomasandsonscafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 5630</p>
+        <button onclick="hideInfo('thomas_and_sons_cafe')">Close</button>
+    </div>
+    <div class="info-tile" id="the_little_cafe">
+        <h2>The Little Cafe</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=The+Little+Cafe"
+                target="_blank">22 Grove Rd, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 7:00 AM - 3:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://thelittlecafe.co.nz/" target="_blank">thelittlecafe.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 579 2288</p>
+        <button onclick="hideInfo('the_little_cafe')">Close</button>
+    </div>
+    <div class="info-tile" id="its_all_good_brew">
+        <h2>It's All Good Brew</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=It%27s+All+Good+Brew"
+                target="_blank">3A Dodson St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Fri: 7:00 AM - 5:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://itsallgoodbrew.co.nz/" target="_blank">itsallgoodbrew.co.nz</a>
+        </p>
+        <p><strong>Phone:</strong> (03) 579 2299</p>
+        <button onclick="hideInfo('its_all_good_brew')">Close</button>
+    </div>
+    <div class="info-tile" id="cbd_eatery">
+        <h2>CBD Eatery</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=CBD+Eatery"
+                target="_blank">62 Queen St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 8:00 AM - 5:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://cbdeatery.co.nz/" target="_blank">cbdeatery.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 6232</p>
+        <button onclick="hideInfo('cbd_eatery')">Close</button>
+    </div>
+    <div class="info-tile" id="teaology">
+        <h2>Teaology</h2>
+        <p><strong>Address:</strong> <a href="https://www.google.com/maps/dir/?api=1&destination=Teaology"
+                target="_blank">98 High St, Blenheim</a></p>
+        <p><strong>Opening Hours:</strong> Mon-Sun: 10:00 AM - 5:00 PM</p>
+        <p><strong>Website:</strong> <a href="https://teaology.co.nz/" target="_blank">teaology.co.nz</a></p>
+        <p><strong>Phone:</strong> (03) 578 8888</p>
+        <button onclick="hideInfo('teaology')">Close</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

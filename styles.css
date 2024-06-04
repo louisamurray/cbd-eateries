@@ -1,0 +1,29 @@
+.image-container {
+    position: relative;
+}
+
+.clickable-overlay {
+    position: absolute;
+    border: 2px solid red; /* Adjust border style and color as needed */
+    border-radius: 50%; /* Makes the overlay a circle */
+    pointer-events: none; /* Ensures the overlay doesn't interfere with clicks */
+}
+
+.info-tile {
+    display: none;
+    position: absolute;
+    width: 200px; /* Adjust this value as needed */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.info-tile h2 {
+    margin-top: 0;
+}
+
+.info-tile button {
+    margin-top: 10px;
+}
