@@ -1,24 +1,55 @@
 let scale = 1;
 const content = document.querySelector('.image-container');
+let startPos = { x: 0, y: 0 };
+let isDragging = false;
 
 function zoomIn() {
     scale += 0.1;
-    content.style.transform = `scale(${scale})`;
-    content.style.transformOrigin = 'top left';
+    updateTransform();
 }
 
 function zoomTwo() {
     if (scale > 0.1) {
         scale -= 0.1;
-        content.style.transform = `scale(${scale})`;
-        content.style.transformOrigin = 'top left';
+        updateTransform();
     }
 }
 
 function resetZoom() {
     scale = 1;
-    content.style.transform = 'scale(1)';
+    content.style.transform = 'translate(0px, 0px) scale(1)';
 }
+
+function updateTransform() {
+    content.style.transform = `translate(${startPos.x}px, ${startPos.y}px) scale(${scale})`;
+}
+
+content.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    startPos.x -= e.clientX;
+    startPos.y -= e.clientY;
+    content.style.cursor = 'grabbing';
+}, true);
+
+document.addEventListener('mouseup', function() {
+    isDragging = false;
+    content.style.cursor = 'grab';
+}, true);
+
+document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+        let pos = {
+            x: e.clientX,
+            y: e.clientY
+        };
+
+        // Calculate the new position
+        startPos.x = pos.x + startPos.x;
+        startPos.y = pos.y + startPos.y;
+
+        updateTransform();
+    }
+}, true);
 
 function showInfo(event, id) {
     event.preventDefault();
