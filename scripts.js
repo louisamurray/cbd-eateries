@@ -15,6 +15,11 @@ function zoomTwo() {
     }
 }
 
+function resetZoom() {
+    scale = 1;
+    zoomableContent.style.transform = 'scale(1)';
+}
+
 function showInfo(event, id) {
     event.preventDefault();
     var tile = document.getElementById(id);
