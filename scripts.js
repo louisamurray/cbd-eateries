@@ -1,7 +1,9 @@
 let scale = 1;
-const content = document.querySelector('.image-container');
-let startPos = { x: 0, y: 0 };
 let isDragging = false;
+let startPos = { x: 0, y: 0 };
+let translation = { x: 0, y: 0 };
+const content = document.querySelector('.image-container');
+const draggableArea = document.getElementById('map-image');  // Assuming 'map-image' is the draggable content
 
 function zoomIn() {
     scale += 0.1;
@@ -11,45 +13,41 @@ function zoomIn() {
 function zoomTwo() {
     if (scale > 0.1) {
         scale -= 0.1;
-        updateTransform();
+        updatetransform();
     }
 }
 
 function resetZoom() {
     scale = 1;
-    content.style.transform = 'translate(0px, 0px) scale(1)';
+    translation = { x: 0, y: 0 };  // Reset translation along with scale
+    updateTransform();
 }
 
 function updateTransform() {
-    content.style.transform = `translate(${startPos.x}px, ${startPos.y}px) scale(${scale})`;
+    content.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
+    content.style.transformOrigin = 'top left';
 }
 
 content.addEventListener('mousedown', function(e) {
     isDragging = true;
-    startPos.x -= e.clientX;
-    startPos.y -= e.clientY;
-    content.style.cursor = 'grabbing';
-}, true);
-
-document.addEventListener('mouseup', function() {
-    isDragging = false;
-    content.style.cursor = 'grab';
-}, true);
+    startPos = {
+        x: e.clientX - translation.x,
+        y: e.clientY - translation.y
+    };
+    e.preventDefault();  // Prevents image drag behavior common in browsers
+}, false);
 
 document.addEventListener('mousemove', function(e) {
     if (isDragging) {
-        let pos = {
-            x: e.clientX,
-            y: e.clientY
-        };
-
-        // Calculate the new position
-        startPos.x = pos.x + startPos.x;
-        startPos.y = pos.y + startPos.y;
-
+        translation.x = e.clientX - startPos.x;
+        translation.y = e.clientY - startPos.y;
         updateTransform();
     }
-}, true);
+}, false);
+
+document.addEventListener('mouseup', function() {
+    isDragging = false;
+}, false);
 
 function showInfo(event, id) {
     event.preventDefault();
@@ -58,9 +56,6 @@ function showInfo(event, id) {
     var rect = img.getBoundingClientRect();
     var x = event.clientX - rect.left;
     var y = event.clientY - rect.top;
-
-    console.log('Image position:', rect);
-    console.log('Click coordinates:', x, y);
 
     tile.style.left = (x + 10) + 'px'; 
     tile.style.top = (y + 10) + 'px';
@@ -87,7 +82,7 @@ function createOverlays() {
         overlay.style.width = (r * 2) + 'px';
         overlay.style.height = (r * 2) + 'px';
         overlay.style.left = (x - r + rect.left) + 'px';
-        overlay.style.top = (y - r + rect.top) + 'px';
+        overlay.style.top = (y - r + rect.top) + 'jpg';
 
         document.querySelector('.image-container').appendChild(overlay);
     });
