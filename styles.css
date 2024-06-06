@@ -3,12 +3,15 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
+    touch-action: none; /* Important for preventing the browser's default touch actions */
 }
 
 .clickable-overlay {
     position: absolute;
     border-radius: 50%; 
     pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.5); /* Adding a slight background color for visibility */
+    border: 2px solid #fff; /* White border for better visibility against map images */
 }
 
 .zoom-controls {
@@ -20,18 +23,38 @@
     border-radius: 5px; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
     z-index: 1000; 
+    display: flex; /* Added for better layout of buttons */
+    gap: 5px; /* Spacing between buttons */
+}
+
+.zoom-controls button {
+    padding: 5px 10px; /* More touch-friendly padding */
+    font-size: 16px; /* Larger text for easier reading on small devices */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.zoom-controls button:hover,
+.zoom-controls button:focus { /* Adding focus for accessibility */
+    background-color: #0056b3;
 }
 
 .info-tile {
     display: none;
     position: absolute;
-    width: 200px;
+    width: 90%; /* Adjusted width for better mobile viewing */
+    max-width: 350px; /* Maximum width to avoid overly large tiles on bigger screens */
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: opacity 0.3s ease;
+    box-sizing: border-box; /* Ensures padding does not affect the width */
 }
 
 .info-tile.active {
@@ -48,6 +71,7 @@
     display: block;
     width: 100%;
     padding: 8px 16px;
+    margin-top: 10px; /* Added margin for better separation from text */
     background-color: #007bff;
     color: white;
     border: none;
