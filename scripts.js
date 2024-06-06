@@ -5,19 +5,19 @@ let lastDistance = null;
 let translation = { x: 0, y: 0 };
 
 const content = document.querySelector('.image-container');
-const draggableArea = document.getElementById('map-image');
+const mapImage = document.getElementById('map-image');
 
 function zoom(scaleFactor, center) {
     scale *= scaleFactor;
-    // Adjust translation based on the zoom center
-    translation.x -= (center.x - translation.x) * (scaleFactor - 1);
-    translation.y -= (center.y - translation.y) * (scaleFactor - 1);
+    // Adjust the translation based on the center of the pinch
+    translation.x -= (center.x - content.offsetLeft - translation.x) * (scaleFactor - 1);
+    translation.y -= (center.y - content.offsetTop - translation.y) * (scaleFactor - 1);
     updateTransform();
 }
 
 function updateTransform() {
-    content.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
-    content.style.transformOrigin = '0 0';
+    mapImage.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
+    mapImage.style.transformOrigin = '0 0';
 }
 
 function getCenter(touches) {
@@ -71,11 +71,7 @@ function handleTouchEnd(evt) {
     }
 }
 
-// Other functions (showInfo, hideInfo, createOverlays) remain unchanged
-
 // Event Listeners for touch and mouse interactions
 content.addEventListener('touchstart', handleTouchStart, { passive: false });
 content.addEventListener('touchmove', handleTouchMove, { passive: false });
-content.addEventListener('touchend', handleTouchInit);
-
-document.addEventListener('DOMContentLoaded', createOverlays);
+content.addEventListener('touchend', handleTouchEnd);

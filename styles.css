@@ -1,10 +1,18 @@
 .image-container {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    touch-action: none; /* Important for preventing the browser's default touch actions */
+    width: 100%; /* Set to the width of the container or specific width */
+    height: 500px; /* Set to the desired height */
+    touch-action: none; /* Disable browser default touch actions in this element */
 }
+
+#map-image {
+    width: 100%; /* Adjust based on your layout needs */
+    transition: transform 0.3s ease; /* Smooth transitions */
+}
+
+/* Other styles remain unchanged */
+
 
 .clickable-overlay {
     position: absolute;
