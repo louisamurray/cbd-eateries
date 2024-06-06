@@ -1,26 +1,56 @@
 .image-container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .clickable-overlay {
     position: absolute;
     border-radius: 50%; 
-    pointer-events: none; 
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
 }
+
+.clickable-overlay:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
 .info-tile {
     display: none;
     position: absolute;
     width: 200px;
     padding: 20px;
-    background-color: white;
+    background-color: #fff;
     border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.info-tile.active {
+    display: block;
+    opacity: 1;
 }
 
 .info-tile h2 {
     margin-top: 0;
+    color: #333;
 }
 
 .info-tile button {
-    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.info-tile button:hover {
+    background-color: #0056b3;
 }

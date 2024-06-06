@@ -1,5 +1,5 @@
 let scale = 1;
-const content = document.querySelector('.image-container'); // Select the container for zooming
+const content = document.querySelector('.image-container');
 
 function zoomIn() {
     scale += 0.1;
@@ -11,7 +11,7 @@ function zoomTwo() {
     if (scale > 0.1) {
         scale -= 0.1;
         content.style.transform = `scale(${scale})`;
-        
+        content.style.transformOrigin = 'top left';
     }
 }
 
