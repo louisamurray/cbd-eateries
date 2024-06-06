@@ -21,10 +21,18 @@
     background: white; 
     padding: 10px; 
     border-radius: 5px; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    box-shadow: 0 2px 4p
+    x rgba(0,0,0,0.1); 
     z-index: 1000; 
     display: flex; /* Added for better layout of buttons */
     gap: 5px; /* Spacing between buttons */
+}
+
+/* Hide zoom controls on mobile devices */
+@media (max-width: 768px) {
+    .zoom-controls {
+        display: none;
+    }
 }
 
 .zoom-controls button {
