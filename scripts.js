@@ -1,8 +1,23 @@
+let scale = 1;
+const content = document.querySelector('.image-container'); // Select the container for zooming
+
+function zoomIn() {
+    scale += 0.1;
+    content.style.transform = `scale(${scale})`;
+    content.style.transformOrigin = 'top left';
+}
+
+function zoomTwo() {
+    if (scale > 0.1) {
+        scale -= 0.1;
+        content.style.transform = `scale(${scale})`;
+        
+    }
+}
+
 function showInfo(event, id) {
     event.preventDefault();
-    
     var tile = document.getElementById(id);
-    
     var img = document.getElementById('map-image');
     var rect = img.getBoundingClientRect();
     var x = event.clientX - rect.left;
