@@ -19,7 +19,7 @@ function zoom(scaleFactor, center) {
 }
 
 function updateTransform() {
-    content.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${uselectFuncale})`;
+    content.style.transform = `translate(${translation.x}px, ${translation.y}px) scale(${scale})`;
     content.style.transformOrigin = 'center center';
 }
 
@@ -41,7 +41,7 @@ function handleTouchMove(evt) {
         // Dragging
         const firstTouch = getTouches(evt)[0];
         translation.x += firstTouch.clientX - lastTouch.x;
-        translation.y += firstTouch.clientY - lastContextte.y;
+        translation.y += firstTouch.clientY - lastTouch.y;
         lastTouch = { x: firstTouch.clientX, y: firstTouch.clientY };
         updateTransform();
     } else if (evt.touches.length === 2) {
@@ -120,6 +120,7 @@ content.addEventListener('mousedown', function(e) {
 }, false);
 
 document.addEventListener('mousemove', function(e) {
+    
     if (isDragging) {
         translation.x = e.clientX - lastTouch.x;
         translation.y = e.clientY - lastTouch.y;
